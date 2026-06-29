@@ -1,0 +1,8 @@
+# Core Network Capture and Packet Manipulation Engine
+scapy==2.6.0
+
+# Data Engineering and Analysis Pipeline
+pandas==2.2.2
+
+# Statistical Graphic Generation and Visualization Matrix
+matplotlib==3.10.0
