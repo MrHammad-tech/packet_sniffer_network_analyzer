@@ -1,0 +1,38 @@
+# Network Packet Sniffer & Traffic Analyzer
+
+## Group Members
+* [Insert Member Name 1]
+* [Insert Member Name 2]
+* [Insert Member Name 3]
+
+---
+
+## Project Description
+This project is a lightweight, Python-based security tool designed to capture, log, analyze, and visualize local area network traffic. Built using Object-Oriented Programming (OOP) principles, the suite consists of three interconnected modules:
+1. **Packet Sniffer (`packet_sniffer.py`)**: Intercepts live network packets in real-time using Scapy, filters Layer 3/4 metadata (IP, TCP, UDP, ARP), detects simple HTTP request types (GET/POST), and securely appends data sequentially to a CSV repository. It also features a raw local network scanner using ARP broadcasts.
+2. **Traffic Analyzer (`analyzer.py`)**: Parses the raw CSV logs to compute critical operational metrics, including total data throughput (in KB and bytes), average frame size, protocol distribution percentages, and active network conversations.
+3. **Data Visualizer (`visualizer.py`)**: Converts data aggregates into high-resolution visual telemetry, outputting clean distribution pie charts and horizontal bar graphs identifying network "top talkers".
+
+---
+
+## Tools and Libraries Used
+* **Python 3** (Core runtime environment)
+* **Scapy** (For raw network packet manipulation, live sniffing, and ARP network scanning)
+* **Pandas** (For high-performance data manipulation, log parsing, and time-series conversions)
+* **Matplotlib** (For rendering and saving analytical charts/graphs)
+* **OS / CSV / Pathlib / Datetime** (Standard Python libraries for dynamic cross-platform file routing and time-stamping)
+
+---
+
+## Installation Instructions
+
+### 1. Prerequisites
+Ensure you have Python 3 installed on your machine. Because packet sniffing requires interacting directly with your machine's Network Interface Card (NIC), you will need **administrative / root privileges** to run the sniffer channel.
+
+*On Windows:* Install **Npcap** (ensure "API-compatible mode" is checked during setup) which is required for Scapy to capture live packets.
+
+### 2. Install Dependencies
+Open your terminal or command prompt inside the project directory and install the required Python libraries using pip:
+
+```bash
+pip install scapy pandas matplotlib

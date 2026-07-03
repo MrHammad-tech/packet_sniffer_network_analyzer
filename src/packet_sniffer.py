@@ -1,5 +1,4 @@
 import os
-import sys
 import csv
 from pathlib import Path
 from datetime import datetime
@@ -21,7 +20,6 @@ CSV_FILE = DATA_DIR / "captured_packets.csv"
 DATA_DIR_STR = str(DATA_DIR)
 CSV_FILE_STR = str(CSV_FILE)
 os.makedirs(DATA_DIR_STR, exist_ok=True)
-
 
 #Function to save the file into given path
 def save_file(file_path, content):
@@ -128,10 +126,6 @@ def main():
     print("=" *60)
     print("PACKET SNIFFER & TRAFFIC ANALYZER INSTALIZING")
     print("=" * 60)
-    
-    if os.name != 'nt' and os.getuid() != 0:
-        print("[-] Error: This script must be run as root/sudo to capture live packets.")
-        sys.exit(1)
         
     initialize_csv()
     StartSniff() 
